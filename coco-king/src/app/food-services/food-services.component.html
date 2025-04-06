@@ -1,1 +1,20 @@
-<p>food-services works!</p>
+<section class="franchises-section">
+    <h2 class="section-title ">Our Franchise</h2>
+    <div class="franchise-list">
+      <div class="franchise-box" *ngFor="let franchise of franchises">
+        <div class="franchise-location">
+          <i class="fas fa-map-marker-alt"></i> {{ franchise.location }}
+        </div>
+        <div class="franchise-address">
+          <i class="fas fa-building"></i> {{ franchise.address }}
+        </div>
+        <div class="franchise-owner">
+          <i class="fas fa-user"></i> Owner: {{ franchise.owner }}
+        </div>
+        <div class="franchise-mobile">
+          <i class="fas fa-phone"></i> Mobile: <a href="tel:{{ franchise.mobile }}">{{ franchise.mobile }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  

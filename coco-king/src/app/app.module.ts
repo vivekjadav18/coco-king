@@ -6,18 +6,17 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './home/homepage/homepage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsComponent } from './products/products.component';
-import { RecipesComponent } from './recipes/recipes.component';
 import { FoodServicesComponent } from './food-services/food-services.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     ProductsComponent,
-    RecipesComponent,
     FoodServicesComponent,
     AboutUsComponent,
     HeaderComponent,
@@ -26,6 +25,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     NgbModule
   ],
   providers: [],
