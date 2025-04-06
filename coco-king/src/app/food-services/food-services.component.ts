@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './food-services.component.html',
   styleUrls: ['./food-services.component.scss']
 })
-export class FoodServicesComponent {
-  franchises = [
+export class FoodServicesComponent  {
+  franchises = [ 
     {
       location: 'Mota Varachha',
       address: '123 Rue de Paris, Paris, France',
