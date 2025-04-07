@@ -1,20 +1,23 @@
-<section class="franchises-section">
-    <h2 class="section-title ">Our Franchise</h2>
-    <div class="franchise-list">
-      <div class="franchise-box" *ngFor="let franchise of franchises">
-        <div class="franchise-location">
-          <i class="fas fa-map-marker-alt"></i> {{ franchise.location }}
-        </div>
-        <div class="franchise-address">
-          <i class="fas fa-building"></i> {{ franchise.address }}
-        </div>
-        <div class="franchise-owner">
-          <i class="fas fa-user"></i> Owner: {{ franchise.owner }}
-        </div>
-        <div class="franchise-mobile">
-          <i class="fas fa-phone"></i> Mobile: <a href="tel:{{ franchise.mobile }}">{{ franchise.mobile }}</a>
-        </div>
-      </div>
+<div class="franchise-list">
+  <div *ngFor="let franchise of franchises" 
+       [class.main-branch]="franchise.isMainBranch" 
+       class="franchise-item">
+    
+    <div class="franchise-header">
+      <h3 [class.main-branch-name]="franchise.isMainBranch">{{ franchise.name }}</h3>
+      <span class="location" [class.main-branch-location]="franchise.isMainBranch">({{ franchise.location }})</span>
     </div>
-  </section>
-  
+    
+    <div class="franchise-details">
+      <p  [class.main-branch-Address]="franchise.isMainBranch"><strong [class.main-branch-Map]="franchise.isMainBranch">Address:</strong> {{ franchise.address }}</p>
+      <p  [class.main-branch-Owner]="franchise.isMainBranch"><strong [class.main-branch-Map]="franchise.isMainBranch">Owner:</strong> {{ franchise.owner }}</p>
+      <p  [class.main-branch-Owner]="franchise.isMainBranch"><strong [class.main-branch-Map]="franchise.isMainBranch">Contact Number:</strong> {{ franchise.contact }}</p>
+      <p>
+        <strong [class.main-branch-Map]="franchise.isMainBranch">Map:</strong> 
+        <a  [class.main-branch-mapLink]="franchise.isMainBranch" class="map-link"  [href]="franchise.mapLink" target="_blank" class="map-link">View on Map</a>
+      </p>
+    </div>
+    
+    <hr class="divider">
+  </div>
+</div>

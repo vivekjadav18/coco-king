@@ -6,48 +6,50 @@ import { Component } from '@angular/core';
   styleUrls: ['./food-services.component.scss']
 })
 export class FoodServicesComponent  {
-  franchises = [ 
-    {
+
+  franchises = [
+    { 
+      name: 'Main Branch',
       location: 'Mota Varachha',
-      address: '123 Rue de Paris, Paris, France',
-      owner: 'John Doe',
-      mobile: '+33 1 23 45 67 89'
+      address: 'G 4/5 vishambhar arcade mota varachha',
+      owner: 'Parth Itlaiya',
+      contact : '+918000428689',
+      mapLink: 'https://maps.app.goo.gl/nTd63Lkg2U3qWo5K6',
+      isMainBranch: true // Mark this as the main branch
     },
-    {
-      location: 'London',
-      address: '456 Oxford Street, London, UK',
+    { 
+      name: 'Franchise 2',
+      location: 'Los Angeles',
+      address: '456 Sunset Blvd, Los Angeles, CA 90001',
       owner: 'Jane Smith',
-      mobile: '+44 20 7946 0958'
+      mapLink: 'https://www.google.com/maps?q=456+Sunset+Blvd,+Los+Angeles,+CA+90001',
+      isMainBranch: false
     },
-    {
-      location: 'New York',
-      address: '789 Broadway, New York, USA',
-      owner: 'Michael Johnson',
-      mobile: '+1 212-555-0123'
+    { 
+      name: 'Franchise 3',
+      location: 'Chicago',
+      address: '789 Lake Shore Dr, Chicago, IL 60611',
+      owner: 'Robert Brown',
+      mapLink: 'https://www.google.com/maps?q=789+Lake+Shore+Dr,+Chicago,+IL+60611',
+      isMainBranch: false
     },
-    {
-      location: 'Tokyo',
-      address: '101 Shibuya, Tokyo, Japan',
-      owner: 'Taro Yamada',
-      mobile: '+81 3-1234-5678'
+    { 
+      name: 'Franchise 4',
+      location: 'Houston',
+      address: '101 Main St, Houston, TX 77002',
+      owner: 'Emily Clark',
+      mapLink: 'https://www.google.com/maps?q=101+Main+St,+Houston,+TX+77002',
+      isMainBranch: false
     },
-    {
-      location: 'Sydney',
-      address: '202 George Street, Sydney, Australia',
-      owner: 'Olivia Lee',
-      mobile: '+61 2 9876 5432'
-    },
-    {
-      location: 'Dubai',
-      address: '303 Sheikh Zayed Road, Dubai, UAE',
-      owner: 'Ahmed Al-Farsi',
-      mobile: '+971 4 123 4567'
-    },
-    {
-      location: 'Berlin',
-      address: '404 Alexanderplatz, Berlin, Germany',
-      owner: 'Lena Müller',
-      mobile: '+49 30 123456789'
+    { 
+      name: 'Franchise 5',
+      location: 'Phoenix',
+      address: '202 Central Ave, Phoenix, AZ 85001',
+      owner: 'Michael Davis',
+      mapLink: 'https://www.google.com/maps?q=202+Central+Ave,+Phoenix,+AZ+85001',
+      isMainBranch: false
     }
   ];
+  
+
 }

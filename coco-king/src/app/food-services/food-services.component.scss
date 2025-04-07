@@ -1,84 +1,127 @@
+.franchise-list {
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #fff; 
+  border-radius: 8px;
+}
 
-.franchises-section {
-    padding: 50px 10px;
-    background-color: #f4f4f9;
-    text-align: center;
+.franchise-item {
+  background-color: #FCFF1A;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  border-left: 5px solid #000000; 
+}
+
+.franchise-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-branch {
+  background-color: #000000; 
+  color: #FCFF1A; 
+  border-left: 5px solid #FCFF1A; 
+}
+
+.main-branch-Address {
+  color: #ffffff;
+}
+
+.main-branch-Owner {
+  color: #ffffff;
+}
+
+.franchise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #fff; 
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #000000;
+  margin: 0;
+}
+
+.main-branch .franchise-header h3 {
+  color: #ffffff; 
+}
+
+strong {
+  color: #000000;
+}
+
+
+.location {
+  font-size: 14px;
+  color: #000000; 
+  font-style: italic;
+}
+
+.franchise-details {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.franchise-details p {
+  margin: 8px 0;
+}
+
+.main-branch-Map {
+  color: #fff;
+}
+
+
+.map-link {
+  color: #000000; 
+  text-decoration: none;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+  color: #fff; 
+}
+
+hr.divider {
+  border: 0;
+  border-top: 1px solid #000000; 
+  margin: 20px 0;
+}
+
+.main-branch-mapLink {
+  color: red;
+}
+.map-link {
+  color: red;
+}
+
+.main-branch-name {
+  color: #fff;
+}
+
+
+.main-branch-location {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 18px;
   }
-  
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #000000; 
-    margin-bottom: 30px;
+
+  .franchise-details {
+    font-size: 14px;
   }
-  
-  .franchise-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+
+  .location {
+    font-size: 12px;
   }
-  
-  .franchise-box {
-    background-color: #FCFF1A;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 280px; 
-    text-align: center;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .franchise-box:hover {
-    transform: translateY(-10px); 
-  }
-  
-  .franchise-location,
-  .franchise-address,
-  .franchise-owner,
-  .franchise-mobile {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 8px;
-  }
-  
-  .franchise-location i,
-  .franchise-address i,
-  .franchise-owner i,
-  .franchise-mobile i {
-    margin-right: 8px; 
-    color: #ff6347;
-  }
-  
-  .franchise-location {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #000000;
-  }
-  
-  .franchise-mobile a {
-    color: #ff6347;
-    text-decoration: none;
-  }
-  
-  .franchise-mobile a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .franchise-list {
-      justify-content: space-around;
-    }
-  
-    .franchise-box {
-      width: 100%;
-      max-width: 350px; 
-      margin-bottom: 20px;
-    }
-  }
-  
-  
+}
