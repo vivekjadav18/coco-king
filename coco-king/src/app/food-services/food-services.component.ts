@@ -55,7 +55,7 @@ export class FoodServicesComponent  {
     { 
       name: 'Franchise 4',
       location: 'Jakatnaka (Surat)',
-      address: 'G-1 shiv sagar food cort near signate mall kamrej',
+      address: 'G-70 royal arcade opp sarthana naturepark jakatnaka',
       owner: 'Sagar Sheladiya',
       contact: '+918732928586',
       mapLink: 'https://www.google.com/maps?q=202+Central+Ave,+Phoenix,+AZ+85001',
