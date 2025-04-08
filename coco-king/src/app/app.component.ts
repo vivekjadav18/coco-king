@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coco-king';
+  @ViewChild('dataContainer', { static: false }) dataContainer!: ElementRef;
+
+  onScroll(e: any, scroll: any) {
+    this.dataContainer.nativeElement.scrollTop = 0;
+  }
 }

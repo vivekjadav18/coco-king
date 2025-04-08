@@ -112,6 +112,28 @@ hr.divider {
   color: #fff;
 }
 
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  font-size: 30px;
+  color: #25D366; /* WhatsApp Green */
+}
+
+.social-links a:hover {
+  color: #128C7E; /* WhatsApp hover color */
+}
+
+.social-links a:nth-child(2) {
+  color: #E1306C; /* Instagram Pink */
+}
+
+.social-links a:nth-child(2):hover {
+  color: #C13584; /* Instagram hover color */
+}
+
 @media (max-width: 768px) {
   h3 {
     font-size: 18px;

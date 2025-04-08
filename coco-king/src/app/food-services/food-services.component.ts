@@ -10,46 +10,72 @@ export class FoodServicesComponent  {
   franchises = [
     { 
       name: 'Main Branch',
-      location: 'Mota Varachha',
+      location: 'Mota Varachha (Surat)',
       address: 'G 4/5 vishambhar arcade mota varachha',
       owner: 'Parth Itlaiya',
-      contact : '+918000428689',
+      contact: '+918000428689',
       mapLink: 'https://maps.app.goo.gl/nTd63Lkg2U3qWo5K6',
-      isMainBranch: true // Mark this as the main branch
+      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
+      whatsapp: 'https://wa.me/+918000428689',  
+      isMainBranch: true
+    },
+    { 
+      name: 'Franchise 1',
+      location: 'Yogi Chock (Surat)',
+      address: 'G-5 savan plaza savalia circle yogi chock',
+      owner: 'Ghanshayabhai Ghori',
+      contact: '+919979621854',
+      mapLink: 'https://maps.app.goo.gl/iC6hSe5HysKTCqFs8',
+      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
+      whatsapp: 'https://wa.me/+919979621854',  
+      isMainBranch: false
     },
     { 
       name: 'Franchise 2',
-      location: 'Los Angeles',
-      address: '456 Sunset Blvd, Los Angeles, CA 90001',
-      owner: 'Jane Smith',
-      mapLink: 'https://www.google.com/maps?q=456+Sunset+Blvd,+Los+Angeles,+CA+90001',
+      location: 'Kamrej (Surat)',
+      address: 'G-1 shiv sagar food cort near signate mall kamrej',
+      owner: 'Sagar Sheladiya',
+      contact: '+918732928586',
+      mapLink: 'https://maps.app.goo.gl/LByYCVKLvKJYmLJCA',
+      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
+      whatsapp: 'https://wa.me/+918732928586',  // WhatsApp link
       isMainBranch: false
     },
     { 
       name: 'Franchise 3',
-      location: 'Chicago',
-      address: '789 Lake Shore Dr, Chicago, IL 60611',
-      owner: 'Robert Brown',
-      mapLink: 'https://www.google.com/maps?q=789+Lake+Shore+Dr,+Chicago,+IL+60611',
+      location: 'Katargam (Surat)',
+      address: 'G-3 sangam heights dabholi bridge near brts stop katargam',
+      owner: 'Jemish Ghelani',
+      contact: '+917874561420',
+      mapLink: 'https://maps.app.goo.gl/dpUgTFNT7AN8L9Wc9',
+      instagram: 'https://www.instagram.com/yourfranchise3',  // Add Instagram link
+      whatsapp: 'https://wa.me/+917874561420',  // WhatsApp link
       isMainBranch: false
     },
     { 
       name: 'Franchise 4',
-      location: 'Houston',
-      address: '101 Main St, Houston, TX 77002',
-      owner: 'Emily Clark',
-      mapLink: 'https://www.google.com/maps?q=101+Main+St,+Houston,+TX+77002',
+      location: 'Jakatnaka (Surat)',
+      address: 'G-1 shiv sagar food cort near signate mall kamrej',
+      owner: 'Sagar Sheladiya',
+      contact: '+918732928586',
+      mapLink: 'https://www.google.com/maps?q=202+Central+Ave,+Phoenix,+AZ+85001',
+      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
+      whatsapp: 'https://wa.me/+918732928586',  // WhatsApp link
       isMainBranch: false
     },
     { 
       name: 'Franchise 5',
-      location: 'Phoenix',
-      address: '202 Central Ave, Phoenix, AZ 85001',
-      owner: 'Michael Davis',
-      mapLink: 'https://www.google.com/maps?q=202+Central+Ave,+Phoenix,+AZ+85001',
+      location: 'Adajan (Surat)',
+      address: 'Marvela bussiness hub, near pal RTO adajan',
+      owner: 'Parth Itlaiya',
+      contact: '+918000428689',
+      mapLink: 'https://maps.app.goo.gl/zdun7PstqwHyGYcK6',
+      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
+      whatsapp: 'https://wa.me/+918000428689',  // WhatsApp link
       isMainBranch: false
     }
   ];
+  
   
 
 }
