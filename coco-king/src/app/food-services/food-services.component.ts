@@ -73,6 +73,17 @@ export class FoodServicesComponent  {
       instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
       whatsapp: 'https://wa.me/+918000428689',  // WhatsApp link
       isMainBranch: false
+    },
+    { 
+      name: 'Franchise 6',
+      location: 'Gopingam (Surat)',
+      address: 'Prizam luxariya, kastbhanjan chowk,Gopingam surat',
+      owner: 'Romilbhai Avaiya',
+      contact: '+919426698504',
+      mapLink: 'https://maps.app.goo.gl/zdun7PstqwHyGYcK6',
+      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
+      whatsapp: 'https://wa.me/+919426698504',  // WhatsApp link
+      isMainBranch: false
     }
   ];
   
