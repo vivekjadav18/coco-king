@@ -43,9 +43,10 @@
 
 
 .img-2{
-  width: 72%;
+  // max-width: 300px;
+  // width: 100%;      
+  // height: auto;  
   border-radius: 30px;
-  overflow: hidden;
 }
 
 .img-test{
@@ -70,3 +71,10 @@
     transition: 1s ease;
 }
 
+.font-family-header{
+  font-family: 'chewy',cursive;
+} 
+
+.font-family-header2{
+  font-family: quicksand;
+}

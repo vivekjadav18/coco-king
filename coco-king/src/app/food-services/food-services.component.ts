@@ -1,4 +1,13 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+interface Items {
+  id : number,
+  name : string,
+  category : string,
+  price : number,
+  quantity : number
+}
 
 @Component({
   selector: 'app-food-services',
@@ -6,6 +15,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./food-services.component.scss']
 })
 export class FoodServicesComponent  {
+
+  constructor(private router : Router) { }
 
   franchises = [
     { 
@@ -62,31 +73,19 @@ export class FoodServicesComponent  {
       instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
       whatsapp: 'https://wa.me/+918732928586',  // WhatsApp link
       isMainBranch: false
-    },
-    { 
-      name: 'Franchise 5',
-      location: 'Adajan (Surat)',
-      address: 'Marvela bussiness hub, near pal RTO adajan',
-      owner: 'Parth Itlaiya',
-      contact: '+918000428689',
-      mapLink: 'https://maps.app.goo.gl/zdun7PstqwHyGYcK6',
-      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
-      whatsapp: 'https://wa.me/+918000428689',  // WhatsApp link
-      isMainBranch: false
-    },
-    { 
-      name: 'Franchise 6',
-      location: 'Gopingam (Surat)',
-      address: 'Prizam luxariya, kastbhanjan chowk,Gopingam surat',
-      owner: 'Romilbhai Avaiya',
-      contact: '+919426698504',
-      mapLink: 'https://maps.app.goo.gl/zdun7PstqwHyGYcK6',
-      instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
-      whatsapp: 'https://wa.me/+919426698504',  // WhatsApp link
-      isMainBranch: false
     }
   ];
   
-  
+
+  Item : Items[] = [
+    {id : 1,name : 'test',category : 'test',price : 10,quantity : 10},
+    {id : 2,name : 'test',category : 'test',price : 10,quantity : 10},
+    {id : 3,name : 'test',category : 'test',price : 10,quantity : 10},
+    {id : 4,name : 'test',category : 'test',price : 10,quantity : 10}
+  ]
+
+  childcall(){
+    this.router.navigate(['/our-franchise/products']);
+  }
 
 }
