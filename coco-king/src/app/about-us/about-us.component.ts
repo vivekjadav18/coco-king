@@ -10,7 +10,7 @@ export class AboutUsComponent {
     {
       name: 'Parth Italiya',
       role: 'Owner of shakti foods',
-      image: '../../assets/image/parth-italiya.jpeg'
+      image: '../../assets/image/parth-italiya.jpg'
     }
   ];
 
