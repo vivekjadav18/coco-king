@@ -1,32 +1,64 @@
-<div class="franchise-list">
-  <div *ngFor="let franchise of franchises" 
-       [class.main-branch]="franchise.isMainBranch" 
-       class="franchise-item">
-    
-    <div class="franchise-header">
-      <h3 [class.main-branch-name]="franchise.isMainBranch">{{ franchise.name }}</h3>
-      <span class="location" [class.main-branch-location]="franchise.isMainBranch">{{ franchise.location }}</span>
-    </div>
-    
-    <div class="franchise-details">
-      <p  [class.main-branch-Address]="franchise.isMainBranch"><strong [class.main-branch-Map]="franchise.isMainBranch">Address:</strong> {{ franchise.address }}</p>
-      <p  [class.main-branch-Owner]="franchise.isMainBranch"><strong [class.main-branch-Map]="franchise.isMainBranch">Owner:</strong> {{ franchise.owner }}</p>
-      <p  [class.main-branch-Owner]="franchise.isMainBranch"><strong [class.main-branch-Map]="franchise.isMainBranch">Contact Number:</strong> {{ franchise.contact }}</p>
-      <p>
-        <strong [class.main-branch-Map]="franchise.isMainBranch">Map:</strong> 
-        <a  [class.main-branch-mapLink]="franchise.isMainBranch" class="map-link"  [href]="franchise.mapLink" target="_blank" class="map-link">View on Map</a>
-      </p>
-    </div>
-    
-      <!-- WhatsApp and Instagram Icons -->
-      <div class="social-links">
-        <a [href]="franchise.whatsapp" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a [href]="franchise.instagram" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
+<div class="franchise-wrapper py-5">
+  <div class="container text-center mb-5">
+    <h1 class="display-4 fw-bold mb-3">Visit <span class="gradient-text">Our Outlets</span></h1>
+    <p class="lead text-muted mx-auto" style="max-width: 600px;">Find your nearest Coco King and experience the royal
+      taste of premium chocolate and coconut.</p>
+    <div class="gold-line mx-auto mt-4"></div>
+  </div>
+
+  <div class="container">
+    <div class="franchise-grid">
+      <div *ngFor="let franchise of franchises; let i = index" [id]="'franchise-' + i"
+        [class.main-branch-special]="franchise.isMainBranch" class="franchise-card glass-card">
+
+        <div class="card-status-badge" *ngIf="franchise.isMainBranch">Flagship Store</div>
+
+        <div class="franchise-header-v pb-3 mb-3 border-bottom">
+          <h3 class="h4 mb-1 fw-bold">{{ franchise.name }}</h3>
+          <span class="location-tag"><i class="bi bi-geo-alt-fill text-gold me-2"></i>{{ franchise.location }}</span>
+        </div>
+
+        <div class="franchise-body-v">
+          <div class="info-row d-flex align-items-start mb-3">
+            <i class="bi bi-house-door text-gold me-3 mt-1"></i>
+            <div>
+              <p class="mb-0 small text-muted text-uppercase fw-bold ls-1">Address</p>
+              <p class="mb-0">{{ franchise.address }}</p>
+            </div>
+          </div>
+
+          <div class="info-row d-flex align-items-center mb-3">
+            <i class="bi bi-person-badge text-gold me-3"></i>
+            <div>
+              <p class="mb-0 small text-muted text-uppercase fw-bold ls-1">Owner</p>
+              <p class="mb-0 fw-500">{{ franchise.owner }}</p>
+            </div>
+          </div>
+
+          <div class="info-row d-flex align-items-center mb-4">
+            <i class="bi bi-telephone text-gold me-3"></i>
+            <div>
+              <p class="mb-0 small text-muted text-uppercase fw-bold ls-1">Contact</p>
+              <p class="mb-0">{{ franchise.contact }}</p>
+            </div>
+          </div>
+
+          <div class="d-grid gap-3 mb-4">
+            <a [href]="franchise.mapLink" target="_blank" class="btn btn-outline-gold btn-sm py-2">
+              <i class="bi bi-map-fill me-2"></i>View Direction
+            </a>
+          </div>
+        </div>
+
+        <div class="franchise-footer-v pt-3 border-top d-flex justify-content-between align-items-center">
+          <span class="small text-muted">Join the Community</span>
+          <div class="social-links-v">
+            <a [href]="franchise.whatsapp" target="_blank" class="whatsapp-link me-3"><i class="bi bi-whatsapp"></i></a>
+            <a [href]="franchise.instagram" target="_blank" class="instagram-link"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </div>
 

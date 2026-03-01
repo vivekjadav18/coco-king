@@ -1,149 +1,127 @@
-.franchise-list {
+.franchise-wrapper {
+  background-color: var(--brand-white);
+}
+
+.gold-line {
+  width: 80px;
+  height: 4px;
+  background: var(--brand-gold);
+  border-radius: 2px;
+}
+
+.franchise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.franchise-card {
+  background: #fff;
   padding: 30px;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background-color: #fff; 
-  border-radius: 8px;
+  border-radius: 30px;
+  border: 1px solid rgba(44, 24, 16, 0.05);
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
 }
 
-.franchise-item {
-  background-color: #F3E9D7;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
-  border-left: 5px solid #000000; 
+.franchise-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(44, 24, 16, 0.08);
+  border-color: var(--brand-gold);
 }
 
-.franchise-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.location-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--brand-accent);
 }
 
-.main-branch {
-  background-color: #000000; 
-  color: #F3E9D7; 
-  border-left: 5px solid #F3E9D7; 
+.text-gold {
+  color: var(--brand-gold);
 }
 
-.main-branch-Address {
-  color: #ffffff;
+.ls-1 {
+  letter-spacing: 0.5px;
 }
 
-.main-branch-Owner {
-  color: #ffffff;
+.fw-500 {
+  font-weight: 500;
 }
 
-.franchise-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #fff; 
-  padding-bottom: 10px;
+/* Flagship Store Styling */
+.main-branch-special {
+  border: 2px solid var(--brand-gold);
+  background: linear-gradient(145deg, #ffffff 0%, var(--brand-soft) 100%);
 }
 
-h3 {
-  font-size: 22px;
-  color: #000000;
-  margin: 0;
+.card-status-badge {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+  padding: 4px 40px;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 10px rgba(212, 168, 67, 0.2);
 }
 
-.main-branch .franchise-header h3 {
-  color: #ffffff; 
+/* Category Sections */
+.info-row {
+  line-height: 1.4;
 }
 
-strong {
-  color: #000000;
+.info-row i {
+  font-size: 1.2rem;
 }
 
-
-.location {
-  font-size: 14px;
-  color: #000000; 
-  font-style: italic;
+/* Buttons */
+.btn-outline-gold {
+  border: 2px solid var(--brand-gold);
+  color: var(--brand-dark);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border-radius: 12px;
 }
 
-.franchise-details {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #000000;
+.btn-outline-gold:hover {
+  background: var(--brand-gold);
+  color: var(--brand-white);
+  transform: scale(1.02);
 }
 
-.franchise-details p {
-  margin: 8px 0;
+/* Social Links */
+.social-links-v a {
+  font-size: 1.2rem;
+  color: var(--brand-dark);
+  transition: all 0.3s ease;
 }
 
-.main-branch-Map {
-  color: #fff;
+.whatsapp-link:hover {
+  color: #25D366;
+  transform: scale(1.2);
 }
 
-
-.map-link {
-  color: #000000; 
-  text-decoration: none;
+.instagram-link:hover {
+  color: #E4405F;
+  transform: scale(1.2);
 }
 
-.map-link:hover {
-  text-decoration: underline;
-  color: #fff; 
-}
-
-hr.divider {
-  border: 0;
-  border-top: 1px solid #000000; 
-  margin: 20px 0;
-}
-
-.main-branch-mapLink {
-  color: red;
-}
-.map-link {
-  color: red;
-}
-
-.main-branch-name {
-  color: #fff;
-}
-
-
-.main-branch-location {
-  color: #fff;
-}
-
-.social-links {
-  display: flex;
-  gap: 10px;
-}
-
-.social-links a {
-  font-size: 30px;
-  color: #25D366; /* WhatsApp Green */
-}
-
-.social-links a:hover {
-  color: #128C7E; /* WhatsApp hover color */
-}
-
-.social-links a:nth-child(2) {
-  color: #E1306C; /* Instagram Pink */
-}
-
-.social-links a:nth-child(2):hover {
-  color: #C13584; /* Instagram hover color */
+/* Desktop Grid Adjustments */
+@media (min-width: 1200px) {
+  .franchise-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  h3 {
-    font-size: 18px;
-  }
-
-  .franchise-details {
-    font-size: 14px;
-  }
-
-  .location {
-    font-size: 12px;
+  .franchise-grid {
+    grid-template-columns: 1fr;
   }
 }

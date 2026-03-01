@@ -1,19 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+/* Design System Variables */
+:root {
+    --brand-dark: #2C1810;
+    --brand-gold: #D4A843;
+    --brand-white: #FFFFFF;
+    --brand-accent: #5D4037;
+    --brand-soft: #F8F9FA;
+    --text-main: #1A0F0A;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --premium-shadow: 0 10px 40px rgba(44, 24, 16, 0.08);
+    --header-font: 'Playfair Display', serif;
+    --body-font: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Global Styles */
 @import "node_modules/bootstrap/dist/css/bootstrap.css";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--brand-white);
+    color: var(--text-main);
+    font-family: var(--body-font);
+    overflow-x: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-family-header {
+    font-family: var(--header-font) !important;
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; /* width of the scrollbar */
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* color of the track */
+    background: var(--brand-white);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(109.6deg, rgb(255, 230, 109) 11.2%, rgb(87, 232, 107) 100.2%); /* color of the scrollbar thumb */
-    border-radius: 4px; /* roundness of the scrollbar thumb */
+    background: linear-gradient(to bottom, var(--brand-gold), var(--brand-accent));
+    border-radius: 10px;
+    border: 3px solid var(--brand-white);
 }
 
-body{
-    overflow: hidden !important;
+/* Utility Classes */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 168, 67, 0.1);
+    border-radius: 20px;
+    box-shadow: var(--premium-shadow);
 }
 
+.gradient-text {
+    background: linear-gradient(45deg, var(--brand-dark), var(--brand-gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

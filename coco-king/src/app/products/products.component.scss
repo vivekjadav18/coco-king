@@ -1,185 +1,125 @@
-/* home.component.css */
+.products-wrapper {
+  background-color: var(--brand-white);
+}
 
-/* Global styles for animations */
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
+.gold-line {
+  width: 80px;
+  height: 4px;
+  background: var(--brand-gold);
+  border-radius: 2px;
+}
+
+.category-title {
+  font-family: var(--header-font);
+  font-weight: 800;
+  color: var(--brand-dark);
+}
+
+.text-gold {
+  color: var(--brand-gold);
+}
+
+.bg-light-soft {
+  background-color: var(--brand-soft);
+}
+
+/* Product Card */
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(44, 24, 16, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(44, 24, 16, 0.06);
+  border-color: var(--brand-gold);
+}
+
+.product-img-v {
+  height: 220px;
+  overflow: hidden;
+}
+
+.product-img-v img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  background: radial-gradient(circle, rgba(212, 168, 67, 0.05) 0%, rgba(255, 255, 255, 0) 75%);
+  border-radius: 50% 20px 50% 20px;
+  /* Chef-artisanal organic shape */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-img-v img {
+  transform: scale(1.1);
+}
+
+.product-content-v {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-content-v h5 {
+  font-family: var(--header-font);
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 12px;
+}
+
+.product-content-v p {
+  font-size: 0.95rem;
+  color: var(--brand-accent);
+  line-height: 1.6;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.product-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(212, 168, 67, 0.3);
+}
+
+/* Animations */
+.animated-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .animated.fadeIn {
-    animation-name: fadeIn;
-  }
-  
-  .animated.fadeInLeft {
-    animation-name: fadeInLeft;
-  }
-  
-  .animated.fadeInRight {
-    animation-name: fadeInRight;
-  }
-  
-  .animated.fadeInUp {
-    animation-name: fadeInUp;
-  }
-  
-  .animated.zoomIn {
-    animation-name: zoomIn;
-  }
-  
-  .animated.bounceInUp {
-    animation-name: bounceInUp;
-  }
-  
-  /* Keyframes for animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeInLeft {
-    from {
-      transform: translateX(-200px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeInRight {
-    from {
-      transform: translateX(200px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes zoomIn {
-    0% {
-      transform: scale(0.3);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes bounceInUp {
-    0% {
-      transform: translateY(2000px);
-      opacity: 0;
-    }
-    60% {
-      transform: translateY(-30px);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  /* Card section for flavors */
-  .card {
-    border: none;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-img-top {
-    // height: 200px;
-    object-fit: cover;
-  }
-  
-  /* Contact form */
-  .form-control {
-    border-radius: 25px;
-  }
-  
-  .btn-block {
-    border-radius: 25px;
+}
+
+/* Response Fixes */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
   }
 
-  .card-title{
-      font-family: 'chewy',cursive;
+  .product-img-v {
+    height: 200px;
   }
-  
-  .card-text{
-      font-family: quicksand;
-
-  }
-  /* home.component.css */
-
-/* Container to center the text */
-.coco-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Flower-inspired Coco Text Design */
-  .coco-text {
-    font-size: 80px;
-    font-family: 'Dancing Script', cursive; /* Elegant, floral-inspired font */
-    font-weight: 700;
-    color: transparent; /* Initially make the text transparent for the gradient */
-    background: linear-gradient(135deg, #FFB6C1, #fff700, #2c2d27bf, #fbff00); /* Soft pastel gradient with pinks, yellows, and greens */
-    background-clip: text; /* Apply gradient only to text */
-    text-align: center;
-    letter-spacing: 3px; /* Slight letter spacing for a flowing feel */
-    text-transform: capitalize; /* First letter uppercase for elegance */
-    padding: 20px 50px;
-    border-radius: 30px; /* Rounded edges for a soft look */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    display: inline-block;
-    position: relative;
-    transform: rotate(-2deg); /* Slight rotation to make it dynamic */
-  }
-  
-  /* Floral Accents: Subtle flower shapes around the text */
-  .coco-text::before,
-  .coco-text::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url('https://img.icons8.com/ios/452/flower.png') no-repeat center center;
-    background-size: contain;
-  }
-  
-  .coco-text::before {
-    top: -10px;
-    left: -30px; /* Position the flower to the top left of the text */
-  }
-  
-  .coco-text::after {
-    bottom: -10px;
-    right: -30px; /* Position the flower to the bottom right of the text */
-  }
-  
-  
+}

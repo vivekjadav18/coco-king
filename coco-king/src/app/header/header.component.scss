@@ -1,10 +1,12 @@
 /* Navbar */
 .new-navbar {
   background: #F3E9D7;
-  padding: 12px 0;
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.04);
+  border-bottom: 1px solid rgba(212, 168, 67, 0.05);
 }
 
 /* Logo */
@@ -16,11 +18,12 @@
 
 /* New Modern Link Style */
 .modern-link {
-  font-size: 18px;
-  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--brand-dark);
   position: relative;
   padding-bottom: 4px;
-  transition: 0.3s ease;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Underline Animation */
@@ -31,11 +34,15 @@
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background: black;
+  background: var(--brand-gold);
   transition: width 0.3s ease;
 }
 
 /* Hover underline */
+.modern-link:hover {
+  color: var(--brand-gold);
+}
+
 .modern-link:hover::after {
   width: 100%;
 }
@@ -43,12 +50,12 @@
 /* Active underline stays expanded */
 .modern-link.active::after {
   width: 100%;
-  background: black;
+  background: var(--brand-gold);
 }
 
 /* Active text color */
 .modern-link.active {
-  color: black !important;
+  color: var(--brand-gold) !important;
 }
 
 /* Mobile Center Items */
