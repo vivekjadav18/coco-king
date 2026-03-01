@@ -14,13 +14,13 @@ export class AboutUsComponent {
     }
   ];
 
-  constructor() { }
+  constructor() {  }
 
   ngOnInit(): void {
   }
 
   // Form submission handler
   onSubmit(): void {
-    alert('Form submitted successfully!');
+    alert('Form   submitted successfully!');
   }
 }
