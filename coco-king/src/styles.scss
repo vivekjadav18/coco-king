@@ -64,3 +64,34 @@ h4,
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* Global Components */
+.premium-badge {
+    background: var(--brand-gold);
+    color: var(--brand-dark);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.btn-outline-gold {
+    border: 2px solid var(--brand-gold);
+    color: var(--brand-dark);
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 12px 35px;
+    transition: all 0.3s ease;
+    background: transparent;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline-gold:hover {
+    background: var(--brand-gold);
+    color: var(--brand-white);
+    box-shadow: 0 10px 25px rgba(212, 168, 67, 0.3);
+}

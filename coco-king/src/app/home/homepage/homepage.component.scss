@@ -2,24 +2,7 @@
   overflow-x: hidden;
 }
 
-/* Base Components used in Home */
-.premium-badge {
-  background: var(--brand-gold);
-  color: var(--brand-dark);
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 11px;
-}
-
-.gradient-text {
-  background: linear-gradient(45deg, var(--brand-dark), var(--brand-gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+/* Base Components move to global styles.scss */
 
 /* Editorial Hero Section */
 .editorial-hero {
@@ -229,21 +212,7 @@
   transform: scale(1.08);
 }
 
-.btn-outline-gold {
-  border: 2px solid var(--brand-gold);
-  color: var(--brand-dark);
-  font-weight: 700;
-  border-radius: 50px;
-  padding: 12px 35px;
-  transition: all 0.3s ease;
-  background: transparent;
-}
-
-.btn-outline-gold:hover {
-  background: var(--brand-gold);
-  color: var(--brand-white);
-  box-shadow: 0 10px 25px rgba(212, 168, 67, 0.3);
-}
+/* btn-outline-gold moved to global styles.scss */
 
 /* Brand Values Section */
 .brand-values {
