@@ -69,7 +69,7 @@ export class FoodServicesComponent  {
       address: 'G-70 royal arcade opp sarthana naturepark jakatnaka',
       owner: 'Sagar Sheladiya',
       contact: '+918732928586',
-      mapLink: 'https://www.google.com/maps?q=202+Central+Ave,+Phoenix,+AZ+85001',
+      mapLink: 'https://maps.app.goo.gl/YTePPgyMaGgXDeLN6',
       instagram: 'https://www.instagram.com/shakti_cocoking_?igsh=dXd1dHp1OXQxdnhs', 
       whatsapp: 'https://wa.me/+918732928586',  // WhatsApp link
       isMainBranch: false
